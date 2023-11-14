@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  <div class="restaurant-content">
+    <div class="row">
+      <div class="col-lg-6">
+        <%# <img class="img-restaurant-show" src="<%= @restaurant.image" %>
+      </div>
+      <div class="col-lg-6">
+        <h1 class="restaurant-name-show">
+          <p>Name:<%= @restaurant.name %></p>
+        </h1>
+
+    
+        <p><strong>Reviews</strong></p>
+          <ul class="list-group">
+            <% @restaurant.reviews.each do |review| %>
+            <li class="list-group-item"><%= review.rating %> ⭐</li>
+              <li class="list-group-item"><%= review.content %></li>
+
+            <% end %>
+            </ul>
+          <br>
+       
+
+        <div class="btns">
+          <span class="btn-remove">
+          <%= link_to "Add a new review", new_restaurant_review_path(@restaurant), class: 'btn btn-success' %>
+        </span>
+          <%= link_to "Edit restaurant", edit_restaurant_path(@restaurant), class: 'btn btn-primary' %>
+          <%# <%= link_to "Delete review", review_restaurant_path(@review), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
+        </div>
+        
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

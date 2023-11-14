@@ -1,6 +1,8 @@
-<%= simple_form_for(restaurant) do |f| %>
+<%= simple_form_for(@restaurant) do |f| %>
   <%= f.input :name %>
   <%= f.input :address %>
-  <%= f.input :rating %>
-  <%= f.submit %>
+  <%= f.input :phone_number %>
+  <%= f.input :category %>
+  <%# <% <%= f.input :image %>
+  <%= f.submit class: 'btn btn-info'  %>
 <% end %>
